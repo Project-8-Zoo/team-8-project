@@ -5,8 +5,8 @@ const db = require('../models');
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zooauthdb", { useNewUrlParser: true });
 
-  const questionsSeed = [
-    {
+const questionsSeed = [
+    {//start of gorrilla
         animal: "Gorilla",
         questions: [
             {
@@ -34,8 +34,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zooauthdb", { u
 
         ],//end quetion Arry
 
-    },
-    {
+    },//end of gorrilla
+    {// start of artcic focx
         animal: "Arctic Fox",
         questions: [
             {
@@ -47,7 +47,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zooauthdb", { u
                     "Greenland",
                     "Canada"
                 ],
-                correct: 1
+                correct: 0
             },
             {
                 qid: 1,
@@ -58,7 +58,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zooauthdb", { u
                     "-70 C",
                     "-30 C"
                 ],
-                correct: 3
+                correct: 2
             },
             {
                 qid: 2,
@@ -69,16 +69,93 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zooauthdb", { u
                     "Spring",
                     "Summer"
                 ],
+                correct: 2
+            },
+        ]
+    },//end of artctic fox
+    {// start of Llama
+        animal: "Llama",
+        questions: [
+            {
+                qid: 0,
+                quest: "Where do llamas live?",
+                answer: [
+                    "Peru",
+                    "Colombia",
+                    "Africa",
+                    "Spain"
+                ],
+                correct: 0
+            },
+            {
+                qid: 1,
+                quest: "How much do llamas weigh?",
+                answer: [
+                    "100-150 lbs",
+                    "200-250",
+                    "280-450",
+                    "450-550"
+                ],
+                correct: 2
+            },
+            {
+                qid: 2,
+                quest: "What percent of their weight can they carry?",
+                answer: [
+                    "10-15",
+                    "15-20",
+                    "20-25",
+                    "25-30"
+                ],
+                correct: 3
+            },
+        ]
+    },//end of llama
+    {// start of Boa Constrictor
+        animal: "Boa Constrictor",
+        questions: [
+            {
+                qid: 0,
+                quest: "Where do boa constrictors live?",
+                answer: [
+                    "China",
+                    "South America",
+                    "Florida",
+                    "Africa"
+                ],
                 correct: 1
             },
-        ]}
+            {
+                qid: 1,
+                quest: "What type of animal is a Boa Constrictor?",
+                answer: [
+                    "Reptile",
+                    "Amphibian",
+                    "Mammal",
+                    "Lizard"
+                ],
+                correct: 2
+            },
+            {
+                qid: 2,
+                quest: "How long can Boa Constrictors get?",
+                answer: [
+                    "6 ft",
+                    "20 ft",
+                    "13 ft",
+                    "50 ft"
+                ],
+                correct: 2
+            },
+        ]
+    }//end of Boa Constrictor
 
-    ];
+];
 
 
 const animalsSeed = [
 
-    
+
     {
         name: "Gorilla",
     },
@@ -91,29 +168,29 @@ const animalsSeed = [
     {
         name: "Boa Constrictor",
     }
-    
-    
+
+
 
 ];
 
 db.Animals.deleteMany({})
-  .then(() => db.Animals.collection.insertMany(animalsSeed))
-  .then((data) => {
-    console.log(data.result.n + ' Animals inserted!');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+    .then(() => db.Animals.collection.insertMany(animalsSeed))
+    .then((data) => {
+        console.log(data.result.n + ' Animals inserted!');
+        process.exit(0);
+    })
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    });
 
 db.Questions.deleteMany({})
-  .then(() => db.Questions.collection.insertMany(questionsSeed))
-  .then((data) => {
-    console.log(data.result.n + ' questions!');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+    .then(() => db.Questions.collection.insertMany(questionsSeed))
+    .then((data) => {
+        console.log(data.result.n + ' questions!');
+        process.exit(0);
+    })
+    .catch((err) => {
+        console.error(err);
+        process.exit(1);
+    });

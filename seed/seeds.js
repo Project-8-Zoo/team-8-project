@@ -18,7 +18,7 @@ const questionsSeed = [
                     "Asia",
                     "USA"
                 ],
-                correct: 1
+                correct: "South America"
             },
             {
                 qid: 1,
@@ -29,7 +29,7 @@ const questionsSeed = [
                     "150 kilos",
                     "1000 grams"
                 ],
-                correct: 2
+                correct: "150 kilos"
             },
 
         ],//end quetion Arry
@@ -47,7 +47,7 @@ const questionsSeed = [
                     "Greenland",
                     "Canada"
                 ],
-                correct: 0
+                correct: "Arctic"
             },
             {
                 qid: 1,
@@ -58,7 +58,7 @@ const questionsSeed = [
                     "-70 C",
                     "-30 C"
                 ],
-                correct: 2
+                correct: "-70 C"
             },
             {
                 qid: 2,
@@ -69,7 +69,7 @@ const questionsSeed = [
                     "Spring",
                     "Summer"
                 ],
-                correct: 2
+                correct: "Spring"
             },
         ]
     },//end of artctic fox
@@ -85,7 +85,7 @@ const questionsSeed = [
                     "Africa",
                     "Spain"
                 ],
-                correct: 0
+                correct: "Peru"
             },
             {
                 qid: 1,
@@ -96,7 +96,7 @@ const questionsSeed = [
                     "280-450",
                     "450-550"
                 ],
-                correct: 2
+                correct: "280-450"
             },
             {
                 qid: 2,
@@ -107,7 +107,7 @@ const questionsSeed = [
                     "20-25",
                     "25-30"
                 ],
-                correct: 3
+                correct: "25-30"
             },
         ]
     },//end of llama
@@ -123,7 +123,7 @@ const questionsSeed = [
                     "Florida",
                     "Africa"
                 ],
-                correct: 1
+                correct: "South America"
             },
             {
                 qid: 1,
@@ -134,7 +134,7 @@ const questionsSeed = [
                     "Mammal",
                     "Lizard"
                 ],
-                correct: 2
+                correct: "Reptile"
             },
             {
                 qid: 2,
@@ -145,7 +145,7 @@ const questionsSeed = [
                     "13 ft",
                     "50 ft"
                 ],
-                correct: 2
+                correct: "13 ft"
             },
         ]
     }//end of Boa Constrictor

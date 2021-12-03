@@ -20,7 +20,7 @@ const QuestionSchema = new Schema({
                 required: true,
             },
             correct: {
-                type: Number,
+                type: String,
             },
         
         }

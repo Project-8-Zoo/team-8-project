@@ -15,11 +15,11 @@ const User = require("./models/userModel.js");
 
 const app = express();
 //local cors config
-app.use(cors())
+// app.use(cors())
 //deployed cors config
-// app.use(cors({
-//   origin:[/*DEPLOYED REACT URL HERE*/]
-// }))
+app.use(cors({
+  origin:["https://zooschool.herokuapp.com"]
+}))
 
 app.use(logger("dev"));
 
